@@ -28,7 +28,7 @@ document.addEventListener('keyup', (e) => {
             // La fonction de destruction peut se lancer
             destroy();
         } 
-    // Si la touche appuyé n'est pas celle attendue, mais qu'elle correspond avec le premier caractère du code
+    // Si la touche appuyée n'est pas celle attendue, mais qu'elle correspond avec le premier caractère du code
     } else if (e.key == codeArr[0] || e.key == codeArr[0].toUpperCase()) {
         // On vide le tableau userTry on conservant uniquement ce premier caractère
         userTry = userTry.slice(0, 1);
