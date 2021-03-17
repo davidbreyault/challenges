@@ -1,0 +1,30 @@
+body {
+    background-color: #eee;
+    font-family: sans-serif;
+}
+
+#form {
+    width: 40%;
+    padding: 30px;
+    background-color: #fff;
+}
+
+input {
+    padding: 5px 8px;
+}
+
+.success {
+    margin-top: 15px;
+    padding: 30px;
+    width: 40%;
+    background-color: #fff;
+    color: #087c08;
+}
+
+.error {
+    margin-top: 15px;
+    padding: 30px;
+    width: 40%;
+    background-color: #fff;
+    color: #9b0b0b;
+}
