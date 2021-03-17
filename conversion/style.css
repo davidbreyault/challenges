@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container form input {
+  display: block;
+  margin: auto;
+  margin-bottom: 4rem;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.container form button {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 310px;
+  height: 100%;
+  border-radius: 50%;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+}
+
+.container form button span {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  mix-blend-mode: difference;
+  color: #00F0B5;
+}
+
+.container form button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  border-radius: 37.5px;
+  background-color: #00F0B5;
+  -webkit-transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container form button:hover {
+  cursor: pointer;
+}
+
+.container form button:hover::after {
+  width: 100%;
+}
+
+.container .modal {
+  position: fixed;
+  z-index: 2;
+  width: 80vw;
+  height: 80vh;
+  top: 10vh;
+  left: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.container .modal .result {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out 0.3s;
+  transition: -webkit-transform 0.3s ease-in-out 0.3s;
+  transition: transform 0.3s ease-in-out 0.3s;
+  transition: transform 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out 0.3s;
+}
+
+.container .modal.open {
+  opacity: .95;
+  pointer-events: all;
+}
+
+.container .modal.open .result {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.container .modal .cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.47, -0.99, 0.31, 1.8);
+  transition: -webkit-transform 0.6s cubic-bezier(0.47, -0.99, 0.31, 1.8);
+  transition: transform 0.6s cubic-bezier(0.47, -0.99, 0.31, 1.8);
+  transition: transform 0.6s cubic-bezier(0.47, -0.99, 0.31, 1.8), -webkit-transform 0.6s cubic-bezier(0.47, -0.99, 0.31, 1.8);
+}
+
+.container .modal .cross .bar:first-of-type {
+  display: block;
+  width: calc(100% * 1.4);
+  height: 6px;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transform-origin: 3px 3px;
+          transform-origin: 3px 3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.container .modal .cross .bar:last-of-type {
+  display: block;
+  width: calc(100% * 1.4);
+  height: 6px;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transform-origin: 3px 3px;
+          transform-origin: 3px 3px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.container .modal .cross:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.container .modal .result {
+  color: #fff;
+  font-size: 4rem;
+  position: relative;
+  top: -10px;
+}
+/*# sourceMappingURL=style.css.map */
