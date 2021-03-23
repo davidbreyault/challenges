@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kavivanar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="modal">
+            <div class="guide">
+                <p>Les jeux sont faits, tu dis combien ?</p>
+                <p class="guide__clue"></p>
+            </div>
+            <div class="dices">
+                <div class="dice dice-one" id="1">
+                    <div class="dice-one__point"></div>
+                    <div class="dice-one__point"></div>
+                    <div class="dice-one__point"></div>
+                    <div class="dice-one__point"></div>
+                    <div class="dice-one__point"></div>
+                    <div class="dice-one__point"></div>
+                    <div class="dice-one__point"></div>
+                    <div class="dice-one__point"></div>
+                    <div class="dice-one__point"></div>
+                </div>
+                <div class="dice dice-two" id="2">
+                    <div class="dice-two__point"></div>
+                    <div class="dice-two__point"></div>
+                    <div class="dice-two__point"></div>
+                    <div class="dice-two__point"></div>
+                    <div class="dice-two__point"></div>
+                    <div class="dice-two__point"></div>
+                    <div class="dice-two__point"></div>
+                    <div class="dice-two__point"></div>
+                    <div class="dice-two__point"></div>
+                </div>
+                <div class="dice dice-three" id="3">
+                    <div class="dice-three__point"></div>
+                    <div class="dice-three__point"></div>
+                    <div class="dice-three__point"></div>
+                    <div class="dice-three__point"></div>
+                    <div class="dice-three__point"></div>
+                    <div class="dice-three__point"></div>
+                    <div class="dice-three__point"></div>
+                    <div class="dice-three__point"></div>
+                    <div class="dice-three__point"></div>
+                </div>
+                <div class="dice dice-four" id="4">
+                    <div class="dice-four__point"></div>
+                    <div class="dice-four__point"></div>
+                    <div class="dice-four__point"></div>
+                    <div class="dice-four__point"></div>
+                    <div class="dice-four__point"></div>
+                    <div class="dice-four__point"></div>
+                    <div class="dice-four__point"></div>
+                    <div class="dice-four__point"></div>
+                    <div class="dice-four__point"></div>
+                </div>
+                <div class="dice dice-five" id="5">
+                    <div class="dice-five__point"></div>
+                    <div class="dice-five__point"></div>
+                    <div class="dice-five__point"></div>
+                    <div class="dice-five__point"></div>
+                    <div class="dice-five__point"></div>
+                    <div class="dice-five__point"></div>
+                    <div class="dice-five__point"></div>
+                    <div class="dice-five__point"></div>
+                    <div class="dice-five__point"></div>
+                </div>
+                <div class="dice dice-six" id="6">
+                    <div class="dice-six__point"></div>
+                    <div class="dice-six__point"></div>
+                    <div class="dice-six__point"></div>
+                    <div class="dice-six__point"></div>
+                    <div class="dice-six__point"></div>
+                    <div class="dice-six__point"></div>
+                    <div class="dice-six__point"></div>
+                    <div class="dice-six__point"></div>
+                    <div class="dice-six__point"></div>
+                </div>
+            </div>
+        </div>
+        <div class="throw">
+            <button class="throw__btn">
+                <span class="throw__btn--text">Lance le dé !</span>
+            </button>
+            <div class="throw__animation"></div>
+        </div>
+        
+        <div class="statistics">
+            <div class="statistics__numbers">
+                <div class="launch">
+                    <p class="launch__mention">Nombre de lancé</p>
+                    <p class="launch__value">0</p>
+                </div>
+                <div class="tries-average">
+                    <p class="tries-average__mention">Moyenne du nombre d'essais</p>
+                    <p class="tries-average__value">0</p>
+                </div>
+            </div>
+            <div class="statistics__table">
+                <div class="row">
+                    <div class="dice-number">#1</div>
+                    <div class="dice-frequency">0</div>
+                    <div class="dice-frequency-rating">0%</div>
+                </div>
+                <div class="row">
+                    <div class="dice-number">#2</div>
+                    <div class="dice-frequency">0</div>
+                    <div class="dice-frequency-rating">0%</div>
+                </div>
+                <div class="row">
+                    <div class="dice-number">#3</div>
+                    <div class="dice-frequency">0</div>
+                    <div class="dice-frequency-rating">0%</div>
+                </div>
+                <div class="row">
+                    <div class="dice-number">#4</div>
+                    <div class="dice-frequency">0</div>
+                    <div class="dice-frequency-rating">0%</div>
+                </div>
+                <div class="row">
+                    <div class="dice-number">#5</div>
+                    <div class="dice-frequency">0</div>
+                    <div class="dice-frequency-rating">0%</div>
+                </div>
+                <div class="row">
+                    <div class="dice-number">#6</div>
+                    <div class="dice-frequency">0</div>
+                    <div class="dice-frequency-rating">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
