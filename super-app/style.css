@@ -1,0 +1,769 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 12px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #00000000;
+  color: #2E2E2E;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #FFF;
+}
+
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+h4 {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 3;
+  padding: .5rem 0;
+  background-color: #DD5555;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #DD5555;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .container img {
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+
+.header .container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: calc(40px - 153.6px);
+  left: 0;
+  width: 100%;
+  background-color: #DD5555;
+  list-style: none;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.header .container .navbar a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 0.875rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.header .container .navbar.open {
+  -webkit-transform: translateY(153.6px);
+          transform: translateY(153.6px);
+}
+
+.header .container .btn {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  z-index: 4;
+  width: 45px;
+  height: 40px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.header .container .btn span {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #FFF;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.header .container .btn__burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 80%;
+  margin: 10% auto;
+}
+
+.header .container .btn__burger span {
+  width: 100%;
+}
+
+.header .container .btn__burger span:nth-of-type(1) {
+  -webkit-transition-delay: 760ms;
+          transition-delay: 760ms;
+}
+
+.header .container .btn__burger span:nth-of-type(2) {
+  -webkit-transition-delay: 640ms;
+          transition-delay: 640ms;
+}
+
+.header .container .btn__burger span:nth-of-type(3) {
+  -webkit-transition-delay: 520ms;
+          transition-delay: 520ms;
+}
+
+.header .container .btn__crossed {
+  position: absolute;
+  top: 0;
+  right: 2.5px;
+  z-index: 4;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  -webkit-transform: translateY(1px) rotate(45deg);
+          transform: translateY(1px) rotate(45deg);
+}
+
+.header .container .btn__crossed span {
+  width: 0%;
+}
+
+.header .container .btn__crossed span:nth-of-type(1) {
+  position: absolute;
+  top: 18px;
+  -webkit-transition-delay: 320ms;
+          transition-delay: 320ms;
+}
+
+.header .container .btn__crossed span:nth-of-type(2) {
+  -webkit-transform-origin: 2px;
+          transform-origin: 2px;
+  -webkit-transform: translateX(18px) rotate(90deg);
+          transform: translateX(18px) rotate(90deg);
+  -webkit-transition-delay: 120ms;
+          transition-delay: 120ms;
+}
+
+.header .container .btn-animation .btn__burger span {
+  width: 0%;
+}
+
+.header .container .btn-animation .btn__burger span:nth-of-type(1) {
+  -webkit-transition-delay: 120ms;
+          transition-delay: 120ms;
+}
+
+.header .container .btn-animation .btn__burger span:nth-of-type(2) {
+  -webkit-transition-delay: 240ms;
+          transition-delay: 240ms;
+}
+
+.header .container .btn-animation .btn__burger span:nth-of-type(3) {
+  -webkit-transition-delay: 360ms;
+          transition-delay: 360ms;
+}
+
+.header .container .btn-animation .btn__crossed span {
+  width: 100%;
+}
+
+.header .container .btn-animation .btn__crossed span:nth-of-type(1) {
+  -webkit-transition-delay: 560ms;
+          transition-delay: 560ms;
+}
+
+.header .container .btn-animation .btn__crossed span:nth-of-type(2) {
+  -webkit-transition-delay: 760ms;
+          transition-delay: 760ms;
+}
+
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+.about {
+  background-image: url("img/about.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 150px 0;
+}
+
+.about h1 {
+  padding-bottom: 2rem;
+}
+
+.about h1 span {
+  display: block;
+  padding-top: 1rem;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.about__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  width: 75%;
+  position: relative;
+}
+
+.about__links a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  background-color: #FFF;
+  border-radius: 5px;
+  color: inherit;
+  text-decoration: none;
+  opacity: .8;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.about__links a:first-of-type img {
+  height: 14px;
+}
+
+.about__links a:hover {
+  opacity: 1;
+}
+
+.about__links a img {
+  padding-right: 8px;
+}
+
+.about__links::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: .5px;
+  background-color: #FFF;
+}
+
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+.uses {
+  padding: 4rem 0;
+}
+
+.uses .services {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  padding-top: 2rem;
+}
+
+.uses .services__stuff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.uses .services__stuff--logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: #DD5555;
+}
+
+.uses .services__stuff--logo img {
+  display: block;
+  width: auto;
+  height: 50%;
+}
+
+.uses .services__stuff:nth-child(2) img {
+  height: 40%;
+}
+
+.uses .services__stuff p {
+  text-align: center;
+}
+
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+.team__header {
+  padding: 5rem 0;
+  background-image: url("img/team.jpg");
+  background-repeat: no-repeat;
+  background-position: 40% 3%;
+  background-size: cover;
+}
+
+.team__profiles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding: 4rem 0;
+}
+
+.team__profiles--member:nth-of-type(1) {
+  margin-bottom: 2rem;
+}
+
+.team__profiles--member:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+.team__profiles--member:nth-of-type(3) {
+  margin-bottom: 2rem;
+}
+
+.team__profiles--member .member-avatar {
+  display: block;
+  max-width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+.team__profiles--member a {
+  display: block;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .5rem;
+  text-decoration: none;
+  background-color: #DD5555;
+  color: #FFF;
+  border-radius: 5px;
+}
+
+.team__profiles--member a img {
+  padding-right: .5rem;
+  vertical-align: text-bottom;
+  position: relative;
+  z-index: 2;
+}
+
+.team__profiles--member a span {
+  position: relative;
+  z-index: 2;
+}
+
+.team__profiles--member a::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  background-color: #801a1a;
+}
+
+.team__profiles--member a:hover::after {
+  width: 100%;
+}
+
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+.contact {
+  background-color: #DD5555;
+  padding: 4rem 0;
+}
+
+.contact h3 {
+  color: #FFF;
+}
+
+.contact .form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 70%;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact .form__field {
+  width: 100%;
+}
+
+.contact .form__field label {
+  display: block;
+  margin-bottom: .3rem;
+  color: #FFF;
+}
+
+.contact .form__field input {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.contact .form__field textarea {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: .5rem;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.contact .form__field:nth-of-type(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.contact .form__field:nth-of-type(2) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.contact .form__field:nth-of-type(3) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.contact .form__field:last-child {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contact .form__field button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.contact .form__field button img {
+  display: block;
+  height: 16px;
+  padding-right: 5px;
+}
+
+.contact .form__field button span {
+  display: block;
+}
+
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+@media screen and (min-width: 576px) {
+  :root {
+    font-size: 12px;
+  }
+  .btn {
+    display: none;
+  }
+  .container {
+    max-width: 540px;
+  }
+  .header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0;
+  }
+  .header::after {
+    width: 0%;
+  }
+  .header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .container img {
+    padding-right: 1rem;
+  }
+  .header .container .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+    top: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .header .container .navbar a.active {
+    background-color: #801a1a;
+  }
+  .header .container .navbar a:hover {
+    background-color: #801a1a;
+  }
+}
+
+/*#############################################################################################################################################################*/
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 720px;
+  }
+  .about__links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 45%;
+  }
+  .about__links a {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .uses .services {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .team__profiles {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .team__profiles--member:nth-of-type(3) {
+    margin-bottom: 0;
+  }
+  .team__profiles--member:nth-of-type(4) {
+    margin-bottom: 0;
+  }
+}
+
+/*#############################################################################################################################################################*/
+@media screen and (min-width: 992px) {
+  :root {
+    font-size: 16px;
+  }
+  .container {
+    max-width: 960px;
+  }
+  .about {
+    padding: 12rem 0;
+  }
+  .about__links {
+    width: 35%;
+  }
+  .uses .services {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .team__header {
+    background-position: 50% 0%;
+  }
+  .team__profiles {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .team__profiles--member:nth-of-type(1) {
+    margin-bottom: 0;
+  }
+  .team__profiles--member:nth-of-type(2) {
+    margin-bottom: 0;
+  }
+  .contact .form__field:nth-of-type(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .contact .form__field:nth-of-type(2) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+}
+
+/*#############################################################################################################################################################*/
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*#############################################################################################################################################################*/
+/*# sourceMappingURL=style.css.map */
